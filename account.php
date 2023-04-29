@@ -1,34 +1,31 @@
+<?php
+session_start();
+
+if (isset($_SESSION['see_username']) === false)
+{
+	header("Location: index.php?loginfirst");
+}
+else if (isset($_REQUEST['logout'])===true)
+{
+	session_destroy();
+	header("Location: index.php?logout");
+}
+
+?>
+
+
+
 <!doctype html>
 <html>
 <head>
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width, initial-scale=1'>
-	<title>Portfolio Page</title>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Portfolio Page</title>
 
-	<link href='css/bootstrap.min.css' rel='stylesheet'>
+<link href='css/profileStyle.css' rel='stylesheet'>
 
-	<script type='text/javascript' src='js/jquery.min.js'></script>
+<script type='text/javascript' src='js/jquery.min.js'></script>
 
-<style>
-.profile-head 
-{
-	transform: translateY(5rem)
-}
-.cover 
-{
-	background-image: url('images/photo-profile-background.avif');
-	background-size: cover;
-	background-repeat: no-repeat
-}
-
-body 
-{
-	background: #654ea3;
-	background: linear-gradient(to right, #e96443, #904e95);
-	min-height: 100vh;
-	overflow-x: hidden
-}
-</style>
 </head>
 <body oncontextmenu='return false' class='snippet-body'>
     <div class="row py-5 px-4">
@@ -37,27 +34,28 @@ body
 			<div class="bg-white shadow rounded overflow-hidden">
 				<div class="px-4 pt-0 pb-4 cover">
 					<div class="media align-items-end profile-head">
-						<div class="profile mr-3"><img src="images/photo-profile.avif" alt="..." width="150" class="rounded mb-2 img-thumbnail"><a href="#" class="btn btn-outline-dark btn-sm btn-block">Edit Profile</a>
-
+						<div class="profile mr-3">
+						<img src="images/photo-profile.jpeg" alt="..." width="150" class="rounded mb-2 img-thumbnail">
+						<a href="?logout" class="btn btn-outline-dark btn-sm btn-block">Log Out</a>
+						
 
 						</div>
 						<div class="media-body mb-5 text-white">
-							<h4 class="mt-0 mb-0">Ryan Clifford L. Perez</h4>
-							<p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>Marinduque PH
-							 </p>
+							<h4 class="mt-0 mb-0"><?php echo $_SESSION['see_fullname']; ?></h4>
+							<p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"><?php echo $_SESSION['see_address']; ?></i></p>
 						</div>
 					</div>
 				</div>
 				<div class="bg-light p-4 d-flex justify-content-end text-center">
 					<ul class="list-inline mb-0">
 						<li class="list-inline-item">
-							<h5 class="font-weight-bold mb-0 d-block">21,150</h5><small class="text-muted"> <i class="fas fa-image mr-1"></i>Photos</small>
+							<h5 class="font-weight-bold mb-0 d-block">666</h5><small class="text-muted"> <i class="fas fa-image mr-1"></i>Photos</small>
 						</li>
 						<li class="list-inline-item">
-							<h5 class="font-weight-bold mb-0 d-block">756,450</h5><small class="text-muted"> <i class="fas fa-user mr-1"></i>Followers</small>
+							<h5 class="font-weight-bold mb-0 d-block">200</h5><small class="text-muted"> <i class="fas fa-user mr-1"></i>Followers</small>
 						</li>
 						<li class="list-inline-item">
-							<h5 class="font-weight-bold mb-0 d-block">340</h5><small class="text-muted"> <i class="fas fa-user mr-1"></i>Following</small>
+							<h5 class="font-weight-bold mb-0 d-block">5</h5><small class="text-muted"> <i class="fas fa-user mr-1"></i>Following</small>
 						</li>
 					</ul>
 				</div>
@@ -65,9 +63,11 @@ body
 				<div class="px-4 py-3">
 					<h5 class="mb-0">Expertise </h5>
 					<div class="p-4 rounded shadow-sm bg-light">
-						<p class="font-italic mb-0">Full-stack Web Developer</p>
-						<p class="font-italic mb-0">Mobile App Developer</p>
-						<p class="font-italic mb-0">Photographer/Videographer</p>
+						<p class="font-italic mb-0">Intermediate Programmer</p>
+						<p class="font-italic mb-0">Video Editing</p>
+						<p class="font-italic mb-0">Photo Editing</p>
+						<p class="font-italic mb-0">Digital Painting</p>
+						
 					</div>
 				</div>
 

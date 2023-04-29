@@ -57,7 +57,8 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff; }
+  background-color: #032c30;
+}
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -8137,14 +8138,15 @@ body {
   font-size: 16px;
   line-height: 1.8;
   font-weight: normal;
-  background: #f8f9fd;
-  color: gray; }
+  background: #4a5563;
+  color: gray; 
+}
 
 a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  color: #8d448b; }
+  color: #0a2927; }
   a:hover, a:focus {
     text-decoration: none !important;
     outline: none !important;
@@ -8190,11 +8192,11 @@ h1, h2, h3, h4, h5,
   .login-wrap h3 {
     font-weight: 700;
     font-size: 20px;
-    color: #8d448b; }
+    color: #0a2927; }
   .login-wrap .icon {
     width: 80px;
     height: 80px;
-    background: #8d448b;
+    background: #0a2927;
     border-radius: 50%;
     font-size: 30px;
     margin: 0 auto;
@@ -8292,9 +8294,9 @@ h1, h2, h3, h4, h5,
 
 /* Style the checkmark/indicator */
 .checkbox-primary {
-  color: #8d448b; }
+  color: #0a2927; }
   .checkbox-primary input:checked ~ .checkmark:after {
-    color: #8d448b; }
+    color: #0a2927; }
 
 .btn {
   cursor: pointer;
@@ -8302,33 +8304,33 @@ h1, h2, h3, h4, h5,
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
   font-size: 15px; }
-  .btn:hover, .btn:active, .btn:focus {
-    outline: none; }
-  .btn.btn-primary {
-    background: #8d448b !important;
-    border: 1px solid #8d448b !important;
-    color: #fff !important; }
-    .btn.btn-primary:hover {
-      border: 1px solid #8d448b;
-      background: transparent;
-      color: #8d448b; }
-    .btn.btn-primary.btn-outline-primary {
-      border: 1px solid #8d448b;
-      background: transparent;
-      color: #8d448b; }
-      .btn.btn-primary.btn-outline-primary:hover {
-        border: 1px solid transparent;
-        background: #8d448b;
-        color: #fff; }
+.btn:hover, .btn:active, .btn:focus {
+	outline: none; }
+.btn.btn-primary {
+	background: #0a2927 !important;
+	border: 1px solid #08bfad !important;
+	color: #fff !important; }
+.btn.btn-primary:hover {
+  border: 1px solid #8d448b;
+  background: transparent;
+  color: #8d448b; }
+.btn.btn-primary.btn-outline-primary {
+  border: 1px solid #8d448b;
+  background: transparent;
+  color: #8d448b; }
+.btn.btn-primary.btn-outline-primary:hover {
+	border: 1px solid transparent;
+	background: #8d448b;
+	color: #fff; }
 
 .form-group {
-  position: relative; }
+	position: relative; }
+.form-group .submit {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	right: 0;
+	margin: 0 auto; }
+@media (max-width: 767.98px) {
   .form-group .submit {
-    position: absolute;
-    top: 20px;
-    left: 0;
-    right: 0;
-    margin: 0 auto; }
-    @media (max-width: 767.98px) {
-      .form-group .submit {
-        top: 0; } }
+	top: 0; } }
